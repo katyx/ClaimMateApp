@@ -319,7 +319,7 @@
                 <!-- Copyright -->
                 <div class="text-center p-4"><b>
                     © 2023 
-                <a class="text-reset fw-bold" href="https://careu.live/">CareU</a>
+                <a class="text-reset fw-bold" href="https://careu.live/">Claim Mate</a>
                 - All Rights Reserved
                                 </b></div>
                 <!-- Copyright -->
