@@ -4,7 +4,7 @@
     $server = 'localhost';
     $username = 'id20747387_admin';
     $password = 'sh3#1Bd1JR9$';
-    $db_name = 'id20747387_care_u';
+    $db_name = 'claim_mate';
 
     $conn = new mysqli($server, $username, $password, $db_name);
     if($conn->connect_error){
