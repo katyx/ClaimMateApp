@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Total Cases - CareU</title>
+    <title>Total Cases - Claim Mate</title>
 
     <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -175,7 +175,7 @@
                 <!-- Copyright -->
                 <div class="text-center p-4">
                     © 2023 
-                <a class="text-reset fw-bold" href="https://careu.live/">CareU</a>
+                <a class="text-reset fw-bold" href="https://careu.live/">ClaimMate</a>
                 - All Rights Reserved
                 </div>
                 <!-- Copyright -->
