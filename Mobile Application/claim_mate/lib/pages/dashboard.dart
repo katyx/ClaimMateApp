@@ -13,8 +13,7 @@ class DashboardScreen extends StatelessWidget {
   final String token;
   final String nic;
 
-  DashboardScreen({required this.token, required this.nic, Key? key})
-      : super(key: key);
+  const DashboardScreen({required this.token, required this.nic, super.key});
 
   void _handleLogout(BuildContext context) async {
     final prefs = await SharedPreferences.getInstance();
@@ -28,19 +27,19 @@ class DashboardScreen extends StatelessWidget {
         // For example, navigate to the login screen
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => LoginPage()),
+          MaterialPageRoute(builder: (context) => const LoginPage()),
         );
       } else {
         // Handle logout failure
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text('Logout Failed'),
-            content: Text('Failed to logout. Please try again.'),
+            title: const Text('Logout Failed'),
+            content: const Text('Failed to logout. Please try again.'),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           ),
@@ -51,12 +50,12 @@ class DashboardScreen extends StatelessWidget {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text('Logout Failed'),
-          content: Text('Token or NIC not found. Please login again.'),
+          title: const Text('Logout Failed'),
+          content: const Text('Token or NIC not found. Please login again.'),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         ),
@@ -84,7 +83,7 @@ class DashboardScreen extends StatelessWidget {
                     AppBar(
                       elevation: 2,
                       backgroundColor: Colors.white,
-                      title: Column(
+                      title: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -107,19 +106,19 @@ class DashboardScreen extends StatelessWidget {
                       actions: [
                         Row(
                           children: [
-                            Icon(Icons.person, color: Colors.black),
+                            const Icon(Icons.person, color: Colors.black),
                             PopupMenuButton(
-                              icon: Icon(Icons.arrow_drop_down,
+                              icon: const Icon(Icons.arrow_drop_down,
                                   color: Colors.black),
                               itemBuilder: (BuildContext context) {
                                 return [
-                                  PopupMenuItem(
-                                    child: Text('Profile'),
+                                  const PopupMenuItem(
                                     value: 'profile',
+                                    child: Text('Profile'),
                                   ),
-                                  PopupMenuItem(
-                                    child: Text('Logout'),
+                                  const PopupMenuItem(
                                     value: 'logout',
+                                    child: Text('Logout'),
                                   ),
                                 ];
                               },
@@ -128,7 +127,7 @@ class DashboardScreen extends StatelessWidget {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Profile()),
+                                        builder: (context) => const Profile()),
                                   );
                                 } else if (value == 'logout') {
                                   _handleLogout(context);
@@ -139,7 +138,7 @@ class DashboardScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 120),
+                    const SizedBox(height: 120),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -148,9 +147,16 @@ class DashboardScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ReportCaseVehicle()),
+                                  builder: (context) => const ReportCaseVehicle()),
                             );
                           },
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(130, 130),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            backgroundColor: Colors.yellow,
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -159,8 +165,8 @@ class DashboardScreen extends StatelessWidget {
                                   "lib/images/pngwing.png",
                                 ),
                               ),
-                              SizedBox(height: 10),
-                              Flexible(
+                              const SizedBox(height: 10),
+                              const Flexible(
                                 child: Text(
                                   'Report Case',
                                   style: TextStyle(
@@ -172,13 +178,6 @@ class DashboardScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          style: ElevatedButton.styleFrom(
-                            fixedSize: Size(130, 130),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            backgroundColor: Colors.yellow,
-                          ),
                         ),
                         ElevatedButton(
                           onPressed: () {
@@ -188,6 +187,13 @@ class DashboardScreen extends StatelessWidget {
                                   builder: (context) => OldCases()),
                             );
                           },
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(130, 130),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            backgroundColor: Colors.yellow,
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -198,8 +204,8 @@ class DashboardScreen extends StatelessWidget {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                              SizedBox(height: 10),
-                              Flexible(
+                              const SizedBox(height: 10),
+                              const Flexible(
                                 child: Text(
                                   'Old Cases',
                                   style: TextStyle(
@@ -211,17 +217,10 @@ class DashboardScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          style: ElevatedButton.styleFrom(
-                            fixedSize: Size(130, 130),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            backgroundColor: Colors.yellow,
-                          ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -233,6 +232,13 @@ class DashboardScreen extends StatelessWidget {
                                   builder: (context) => RegVehicles()),
                             );
                           },
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(130, 130),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            backgroundColor: Colors.yellow,
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -241,8 +247,8 @@ class DashboardScreen extends StatelessWidget {
                                   "lib/images/vehicle.png",
                                 ),
                               ),
-                              SizedBox(height: 10),
-                              Flexible(
+                              const SizedBox(height: 10),
+                              const Flexible(
                                 child: Text(
                                   'Reg. Vehicles',
                                   style: TextStyle(
@@ -254,22 +260,22 @@ class DashboardScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          style: ElevatedButton.styleFrom(
-                            fixedSize: Size(130, 130),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            backgroundColor: Colors.yellow,
-                          ),
                         ),
                         ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ContactUs()),
+                                  builder: (context) => const ContactUs()),
                             );
                           },
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(130, 130),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            backgroundColor: Colors.yellow,
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -278,8 +284,8 @@ class DashboardScreen extends StatelessWidget {
                                   "lib/images/customer-support.png",
                                 ),
                               ),
-                              SizedBox(height: 10),
-                              Flexible(
+                              const SizedBox(height: 10),
+                              const Flexible(
                                 child: Text(
                                   'Contact Us',
                                   style: TextStyle(
@@ -291,22 +297,15 @@ class DashboardScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          style: ElevatedButton.styleFrom(
-                            fixedSize: Size(130, 130),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            backgroundColor: Colors.yellow,
-                          ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 243),
+                    const SizedBox(height: 243),
                     TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ContactUs()),
+                          MaterialPageRoute(builder: (context) => const ContactUs()),
                         );
                       },
                       child: const Text.rich(

@@ -4,7 +4,7 @@ import 'package:claim_mate/pages/report_case_driver.dart';
 import 'package:flutter/material.dart';
 
 class ReportCaseVehicle extends StatelessWidget {
-  const ReportCaseVehicle({Key? key}) : super(key: key);
+  const ReportCaseVehicle({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +27,12 @@ class ReportCaseVehicle extends StatelessWidget {
                     elevation: 2,
                     backgroundColor: Colors.white,
                     leading: IconButton(
-                      icon: Icon(Icons.arrow_back, color: Colors.black),
+                      icon: const Icon(Icons.arrow_back, color: Colors.black),
                       onPressed: () {
                         Navigator.pop(context);
                       },
                     ),
-                    title: Column(
+                    title: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -55,19 +55,19 @@ class ReportCaseVehicle extends StatelessWidget {
                     actions: [
                       Row(
                         children: [
-                          Icon(Icons.person, color: Colors.black),
+                          const Icon(Icons.person, color: Colors.black),
                           PopupMenuButton(
-                            icon: Icon(Icons.arrow_drop_down,
+                            icon: const Icon(Icons.arrow_drop_down,
                                 color: Colors.black),
                             itemBuilder: (BuildContext context) {
                               return [
-                                PopupMenuItem(
-                                  child: Text('Profile'),
+                                const PopupMenuItem(
                                   value: 'profile',
+                                  child: Text('Profile'),
                                 ),
-                                PopupMenuItem(
-                                  child: Text('Logout'),
+                                const PopupMenuItem(
                                   value: 'logout',
+                                  child: Text('Logout'),
                                 ),
                               ];
                             },
@@ -83,7 +83,7 @@ class ReportCaseVehicle extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 80),
+                  const SizedBox(height: 80),
                   Container(
                     width: 340,
                     decoration: BoxDecoration(
@@ -100,27 +100,27 @@ class ReportCaseVehicle extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         DropdownButton(
-                          items: [
+                          items: const [
                             DropdownMenuItem(
-                              child: Text('WP BEA-1622'),
                               value: 'Vehicle 1',
+                              child: Text('WP BEA-1622'),
                             ),
                             DropdownMenuItem(
-                              child: Text('WP CBE-1287'),
                               value: 'Vehicle 2',
+                              child: Text('WP CBE-1287'),
                             ),
                             DropdownMenuItem(
-                              child: Text('WP BBD-1785'),
                               value: 'Vehicle 3',
+                              child: Text('WP BBD-1785'),
                             ),
                           ],
                           hint: const Text('Select Vehicle'),
                           onChanged: (value) {},
                         ),
                         const SizedBox(height: 20),
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.fromLTRB(40, 0, 22, 30),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -135,56 +135,56 @@ class ReportCaseVehicle extends StatelessWidget {
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Vehicle Make',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Vehicle Model',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'YOM',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Transmission',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Fuel Type',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Engine Cap.',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Engine No.',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Chassis No.',
                                       style: TextStyle(
@@ -204,56 +204,56 @@ class ReportCaseVehicle extends StatelessWidget {
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
@@ -273,56 +273,56 @@ class ReportCaseVehicle extends StatelessWidget {
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Honda',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Dio',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '2015',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Auto',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Petrol',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '110cc',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '1P390MB',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '16114196',
                                       style: TextStyle(
@@ -335,14 +335,14 @@ class ReportCaseVehicle extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
 
                         //Next Button
                         SizedBox(
                           height: 50.0,
                           width: double.infinity,
                           child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 95),
+                              padding: const EdgeInsets.symmetric(horizontal: 95),
                               child: MYButton(
                                 gsntext: 'Next',
                                 onPressed: () {
@@ -350,21 +350,21 @@ class ReportCaseVehicle extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            ReportCaseDriver()),
+                                            const ReportCaseDriver()),
                                   );
                                 },
                               )),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),
-                  SizedBox(height: 70),
+                  const SizedBox(height: 70),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ContactUs()),
+                        MaterialPageRoute(builder: (context) => const ContactUs()),
                       );
                     },
                     child: const Text.rich(

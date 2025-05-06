@@ -2,7 +2,7 @@ import 'package:claim_mate/components/button.dart';
 import 'package:flutter/material.dart';
 
 class Submited extends StatelessWidget {
-  const Submited({Key? key}) : super(key: key);
+  const Submited({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,24 +21,24 @@ class Submited extends StatelessWidget {
               SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(height: 240),
+                    const SizedBox(height: 240),
                     Image.asset(
                       "lib/images/done.png",
                       height: 200,
                     ),
-                    Text(
+                    const Text(
                       "Submitted Successfully!",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 200),
+                    const SizedBox(height: 200),
                     SizedBox(
                       height: 50.0,
                       width: double.infinity,
                       child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 95),
+                          padding: const EdgeInsets.symmetric(horizontal: 95),
                           child: MYButton(
                             gsntext: 'Done',
                             onPressed: () {},

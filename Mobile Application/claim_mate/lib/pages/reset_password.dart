@@ -5,7 +5,7 @@ class ResetPasswordPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _emailController = TextEditingController();
+    final emailController = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(title: const Text("Reset Password")),
@@ -15,7 +15,7 @@ class ResetPasswordPage extends StatelessWidget {
           children: [
             const Text("Enter your email to receive a reset code"),
             TextField(
-              controller: _emailController,
+              controller: emailController,
               decoration: const InputDecoration(labelText: "Email"),
             ),
             const SizedBox(height: 20),

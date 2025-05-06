@@ -2,7 +2,7 @@ import 'package:claim_mate/components/button.dart';
 import 'package:flutter/material.dart';
 
 class ContactUs extends StatelessWidget {
-  const ContactUs({Key? key}) : super(key: key);
+  const ContactUs({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +23,12 @@ class ContactUs extends StatelessWidget {
                     elevation: 2,
                     backgroundColor: Colors.white,
                     leading: IconButton(
-                      icon: Icon(Icons.arrow_back, color: Colors.black),
+                      icon: const Icon(Icons.arrow_back, color: Colors.black),
                       onPressed: () {
                         Navigator.pop(context);
                       },
                     ),
-                    title: Column(
+                    title: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -58,7 +58,7 @@ class ContactUs extends StatelessWidget {
                     height: 50.0,
                     width: double.infinity,
                     child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 95),
+                        padding: const EdgeInsets.symmetric(horizontal: 95),
                         child: MYButton(
                           gsntext: 'Call Us',
                           onPressed: () {
@@ -74,7 +74,7 @@ class ContactUs extends StatelessWidget {
                     height: 50.0,
                     width: double.infinity,
                     child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 95),
+                        padding: const EdgeInsets.symmetric(horizontal: 95),
                         child: MYButton(
                           gsntext: 'Email Us',
                           onPressed: () {
@@ -86,13 +86,13 @@ class ContactUs extends StatelessWidget {
                   const SizedBox(height: 270),
 
                   //Copyright Text
-                  Text(
+                  const Text(
                     '©2023 CareU Insurance',
                     style: TextStyle(
                       color: Colors.black54,
                     ),
                   ),
-                  Text(
+                  const Text(
                     'All Right Reserved',
                     style: TextStyle(
                       color: Colors.black54,

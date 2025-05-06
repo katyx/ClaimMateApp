@@ -5,7 +5,7 @@ class RestGetCodePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _codeController = TextEditingController();
+    final codeController = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(title: const Text("Enter Code")),
@@ -15,7 +15,7 @@ class RestGetCodePage extends StatelessWidget {
           children: [
             const Text("Enter the code you received via email"),
             TextField(
-              controller: _codeController,
+              controller: codeController,
               decoration: const InputDecoration(labelText: "Reset Code"),
             ),
             const SizedBox(height: 20),

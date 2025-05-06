@@ -14,7 +14,7 @@ class LoginService {
       final data = jsonDecode(response.body);
       final token = data['token'];
       final prefs = await SharedPreferences.getInstance();
-      final secureStorage = FlutterSecureStorage();
+      const secureStorage = FlutterSecureStorage();
       await prefs.setString('token', token);
       await prefs.setString('nic', nic);
       await secureStorage.write(key: 'token', value: token);

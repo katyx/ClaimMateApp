@@ -6,18 +6,18 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
 class ReportCaseCase extends StatefulWidget {
-  const ReportCaseCase({Key? key}) : super(key: key);
+  const ReportCaseCase({super.key});
 
   @override
   State<ReportCaseCase> createState() => _ReportCaseCaseState();
 }
 
 class _ReportCaseCaseState extends State<ReportCaseCase> {
-  TextEditingController _locationController = TextEditingController();
-  TextEditingController _dateController = TextEditingController();
-  TextEditingController _timeController = TextEditingController();
+  final TextEditingController _locationController = TextEditingController();
+  final TextEditingController _dateController = TextEditingController();
+  final TextEditingController _timeController = TextEditingController();
   String _currentLocation = '';
-  bool _disableTextFields = true;
+  final bool _disableTextFields = true;
 
   @override
   void dispose() {
@@ -75,16 +75,16 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                     elevation: 2,
                     backgroundColor: Colors.white,
                     leading: IconButton(
-                      icon: Icon(Icons.arrow_back, color: Colors.black),
+                      icon: const Icon(Icons.arrow_back, color: Colors.black),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ReportCaseDriver()),
+                              builder: (context) => const ReportCaseDriver()),
                         );
                       },
                     ),
-                    title: Column(
+                    title: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -107,19 +107,19 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                     actions: [
                       Row(
                         children: [
-                          Icon(Icons.person, color: Colors.black),
+                          const Icon(Icons.person, color: Colors.black),
                           PopupMenuButton(
-                            icon: Icon(Icons.arrow_drop_down,
+                            icon: const Icon(Icons.arrow_drop_down,
                                 color: Colors.black),
                             itemBuilder: (BuildContext context) {
                               return [
-                                PopupMenuItem(
-                                  child: Text('Profile'),
+                                const PopupMenuItem(
                                   value: 'profile',
+                                  child: Text('Profile'),
                                 ),
-                                PopupMenuItem(
-                                  child: Text('Logout'),
+                                const PopupMenuItem(
                                   value: 'logout',
+                                  child: Text('Logout'),
                                 ),
                               ];
                             },
@@ -135,7 +135,7 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 25),
+                  const SizedBox(height: 25),
                   Container(
                     width: 340,
                     decoration: BoxDecoration(
@@ -152,14 +152,14 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
 
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 25),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: TextFormField(
                             decoration: InputDecoration(
                               hintText: 'Date',
-                              hintStyle: TextStyle(color: Colors.black12),
+                              hintStyle: const TextStyle(color: Colors.black12),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -170,14 +170,14 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                             enabled: !_disableTextFields,
                           ),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
 
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 25),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: TextFormField(
                             decoration: InputDecoration(
                               hintText: 'Time',
-                              hintStyle: TextStyle(color: Colors.grey),
+                              hintStyle: const TextStyle(color: Colors.grey),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -188,16 +188,16 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                             enabled: !_disableTextFields,
                           ),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
 
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 25),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: TextFormField(
                             maxLines: null,
                             keyboardType: TextInputType.multiline,
                             decoration: InputDecoration(
                               hintText: 'Location',
-                              hintStyle: TextStyle(color: Colors.grey),
+                              hintStyle: const TextStyle(color: Colors.grey),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -208,78 +208,78 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                             enabled: !_disableTextFields,
                           ),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
 
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 25),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: TextFormField(
                             maxLines: null,
                             keyboardType: TextInputType.multiline,
                             decoration: InputDecoration(
                               hintText: 'Any Other Reasons',
-                              hintStyle: TextStyle(color: Colors.grey),
+                              hintStyle: const TextStyle(color: Colors.grey),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
                             ),
                           ),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
 
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 25),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: TextFormField(
                             maxLines: null,
                             keyboardType: TextInputType.multiline,
                             decoration: InputDecoration(
                               hintText: 'Cause of Damage',
-                              hintStyle: TextStyle(color: Colors.grey),
+                              hintStyle: const TextStyle(color: Colors.grey),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
                             ),
                           ),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
 
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 25),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: TextFormField(
                             maxLines: null,
                             keyboardType: TextInputType.multiline,
                             decoration: InputDecoration(
                               hintText: 'Extend Damage',
-                              hintStyle: TextStyle(color: Colors.grey),
+                              hintStyle: const TextStyle(color: Colors.grey),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
                             ),
                           ),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
 
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 25),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: TextFormField(
                             maxLines: null,
                             keyboardType: TextInputType.multiline,
                             decoration: InputDecoration(
                               hintText: 'Third Party Details',
-                              hintStyle: TextStyle(color: Colors.grey),
+                              hintStyle: const TextStyle(color: Colors.grey),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         //Next Button
                         SizedBox(
                           height: 50.0,
                           width: double.infinity,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 95),
+                            padding: const EdgeInsets.symmetric(horizontal: 95),
                             child: MYButton(
                               gsntext: 'Submit',
                               onPressed: () {
@@ -287,8 +287,8 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                                   context: context,
                                   builder: (BuildContext context) {
                                     return AlertDialog(
-                                      title: Text('Confirmation'),
-                                      content: Text(
+                                      title: const Text('Confirmation'),
+                                      content: const Text(
                                           'Are you sure you want to submit?'),
                                       actions: [
                                         TextButton(
@@ -296,7 +296,7 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                                             // User selected No
                                             Navigator.of(context).pop();
                                           },
-                                          child: Text('No'),
+                                          child: const Text('No'),
                                         ),
                                         TextButton(
                                           onPressed: () {
@@ -305,10 +305,10 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      Submited()),
+                                                      const Submited()),
                                             );
                                           },
-                                          child: Text('Yes'),
+                                          child: const Text('Yes'),
                                         ),
                                       ],
                                     );
@@ -319,16 +319,16 @@ class _ReportCaseCaseState extends State<ReportCaseCase> {
                           ),
                         ),
 
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ContactUs()),
+                        MaterialPageRoute(builder: (context) => const ContactUs()),
                       );
                     },
                     child: const Text.rich(

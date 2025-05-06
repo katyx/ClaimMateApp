@@ -2,7 +2,7 @@ import 'package:claim_mate/pages/contact_us.dart';
 import 'package:flutter/material.dart';
 
 class VehicleDetails extends StatelessWidget {
-  const VehicleDetails({Key? key}) : super(key: key);
+  const VehicleDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +25,12 @@ class VehicleDetails extends StatelessWidget {
                     elevation: 2,
                     backgroundColor: Colors.white,
                     leading: IconButton(
-                      icon: Icon(Icons.arrow_back, color: Colors.black),
+                      icon: const Icon(Icons.arrow_back, color: Colors.black),
                       onPressed: () {
                         Navigator.pop(context);
                       },
                     ),
-                    title: Column(
+                    title: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -46,19 +46,19 @@ class VehicleDetails extends StatelessWidget {
                     actions: [
                       Row(
                         children: [
-                          Icon(Icons.person, color: Colors.black),
+                          const Icon(Icons.person, color: Colors.black),
                           PopupMenuButton(
-                            icon: Icon(Icons.arrow_drop_down,
+                            icon: const Icon(Icons.arrow_drop_down,
                                 color: Colors.black),
                             itemBuilder: (BuildContext context) {
                               return [
-                                PopupMenuItem(
-                                  child: Text('Profile'),
+                                const PopupMenuItem(
                                   value: 'profile',
+                                  child: Text('Profile'),
                                 ),
-                                PopupMenuItem(
-                                  child: Text('Logout'),
+                                const PopupMenuItem(
                                   value: 'logout',
+                                  child: Text('Logout'),
                                 ),
                               ];
                             },
@@ -74,7 +74,7 @@ class VehicleDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 80),
+                  const SizedBox(height: 80),
                   Container(
                     width: 340,
                     decoration: BoxDecoration(
@@ -89,10 +89,10 @@ class VehicleDetails extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Column(
+                    child: const Column(
                       children: [
                         SizedBox(height: 20),
-                        const SizedBox(height: 20),
+                        SizedBox(height: 20),
                         Padding(
                           padding: EdgeInsets.fromLTRB(40, 0, 22, 30),
                           child: Row(
@@ -108,56 +108,56 @@ class VehicleDetails extends StatelessWidget {
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Vehicle Make',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Vehicle Model',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'YOM',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Transmission',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Fuel Type',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Engine Cap.',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Engine No.',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Chassis No.',
                                       style: TextStyle(
@@ -177,56 +177,56 @@ class VehicleDetails extends StatelessWidget {
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '           :',
                                       style: TextStyle(
@@ -246,56 +246,56 @@ class VehicleDetails extends StatelessWidget {
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Honda',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Dio',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '2015',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Auto',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       'Petrol',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '110cc',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '1P390MB',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Text(
                                       '16114196',
                                       style: TextStyle(
@@ -313,12 +313,12 @@ class VehicleDetails extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 160),
+                  const SizedBox(height: 160),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ContactUs()),
+                        MaterialPageRoute(builder: (context) => const ContactUs()),
                       );
                     },
                     child: const Text.rich(

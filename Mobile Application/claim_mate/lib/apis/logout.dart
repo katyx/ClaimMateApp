@@ -14,7 +14,7 @@ class LogoutApi {
       if (response.statusCode == 200) {
         // Logout successful
         final prefs = await SharedPreferences.getInstance();
-        final secureStorage = FlutterSecureStorage();
+        const secureStorage = FlutterSecureStorage();
         await prefs.remove('token');
         await secureStorage.delete(key: 'token');
         return true;

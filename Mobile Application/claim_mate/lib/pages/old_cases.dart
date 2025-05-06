@@ -2,7 +2,7 @@ import 'package:claim_mate/pages/contact_us.dart';
 import 'package:flutter/material.dart';
 
 class OldCases extends StatelessWidget {
-  OldCases({Key? key}) : super(key: key);
+  OldCases({super.key});
 
   // Sample vehicle data
   final List<CaseData> caseDataList = [
@@ -33,12 +33,12 @@ class OldCases extends StatelessWidget {
                     elevation: 2,
                     backgroundColor: Colors.white,
                     leading: IconButton(
-                      icon: Icon(Icons.arrow_back, color: Colors.black),
+                      icon: const Icon(Icons.arrow_back, color: Colors.black),
                       onPressed: () {
                         Navigator.pop(context);
                       },
                     ),
-                    title: Column(
+                    title: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -54,19 +54,19 @@ class OldCases extends StatelessWidget {
                     actions: [
                       Row(
                         children: [
-                          Icon(Icons.person, color: Colors.black),
+                          const Icon(Icons.person, color: Colors.black),
                           PopupMenuButton(
-                            icon: Icon(Icons.arrow_drop_down,
+                            icon: const Icon(Icons.arrow_drop_down,
                                 color: Colors.black),
                             itemBuilder: (BuildContext context) {
                               return [
-                                PopupMenuItem(
-                                  child: Text('Profile'),
+                                const PopupMenuItem(
                                   value: 'profile',
+                                  child: Text('Profile'),
                                 ),
-                                PopupMenuItem(
-                                  child: Text('Logout'),
+                                const PopupMenuItem(
                                   value: 'logout',
+                                  child: Text('Logout'),
                                 ),
                               ];
                             },
@@ -82,16 +82,16 @@ class OldCases extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   ListView.builder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: caseDataList.length,
                     itemBuilder: (context, index) {
                       CaseData vehicleData = caseDataList[index];
 
                       return Padding(
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: 20,
                           vertical: 10,
                         ),
@@ -113,14 +113,14 @@ class OldCases extends StatelessWidget {
                             children: [
                               Column(
                                 children: [
-                                  SizedBox(height: 30),
+                                  const SizedBox(height: 30),
                                   Padding(
-                                    padding: EdgeInsets.fromLTRB(40, 0, 22, 30),
+                                    padding: const EdgeInsets.fromLTRB(40, 0, 22, 30),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        Expanded(
+                                        const Expanded(
                                           child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
@@ -148,7 +148,7 @@ class OldCases extends StatelessWidget {
                                             ],
                                           ),
                                         ),
-                                        Expanded(
+                                        const Expanded(
                                           child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
@@ -183,21 +183,21 @@ class OldCases extends StatelessWidget {
                                             children: [
                                               Text(
                                                 vehicleData.caseNo,
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                              SizedBox(height: 20),
+                                              const SizedBox(height: 20),
                                               Text(
                                                 vehicleData.vehicleNo,
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                              SizedBox(height: 20),
+                                              const SizedBox(height: 20),
                                               Text(
                                                 vehicleData.casedate,
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
@@ -207,7 +207,7 @@ class OldCases extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(height: 10),
+                                  const SizedBox(height: 10),
                                 ],
                               ),
                               Positioned(
@@ -219,7 +219,7 @@ class OldCases extends StatelessWidget {
                                     onPressed: () {
                                       // Add your logic for the button's onPressed event here
                                     },
-                                    child: Text(
+                                    child: const Text(
                                       'More Details',
                                       style: TextStyle(
                                         color: Colors.blue,
@@ -239,7 +239,7 @@ class OldCases extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ContactUs()),
+                        MaterialPageRoute(builder: (context) => const ContactUs()),
                       );
                     },
                     child: const Text.rich(
@@ -259,7 +259,7 @@ class OldCases extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),

@@ -4,7 +4,7 @@ import 'package:claim_mate/pages/report_case_vehicle.dart';
 import 'package:flutter/material.dart';
 
 class ReportCaseDriver extends StatefulWidget {
-  const ReportCaseDriver({Key? key}) : super(key: key);
+  const ReportCaseDriver({super.key});
 
   @override
   _ReportCaseDriverState createState() => _ReportCaseDriverState();
@@ -19,7 +19,7 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime.now(),
-      lastDate: DateTime.now().add(Duration(days: 365)),
+      lastDate: DateTime.now().add(const Duration(days: 365)),
     ).then((pickedDate) {
       if (pickedDate != null) {
         setState(() {
@@ -50,16 +50,16 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                     elevation: 2,
                     backgroundColor: Colors.white,
                     leading: IconButton(
-                      icon: Icon(Icons.arrow_back, color: Colors.black),
+                      icon: const Icon(Icons.arrow_back, color: Colors.black),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ReportCaseVehicle()),
+                              builder: (context) => const ReportCaseVehicle()),
                         );
                       },
                     ),
-                    title: Column(
+                    title: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -82,19 +82,19 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                     actions: [
                       Row(
                         children: [
-                          Icon(Icons.person, color: Colors.black),
+                          const Icon(Icons.person, color: Colors.black),
                           PopupMenuButton(
-                            icon: Icon(Icons.arrow_drop_down,
+                            icon: const Icon(Icons.arrow_drop_down,
                                 color: Colors.black),
                             itemBuilder: (BuildContext context) {
                               return [
-                                PopupMenuItem(
-                                  child: Text('Profile'),
+                                const PopupMenuItem(
                                   value: 'profile',
+                                  child: Text('Profile'),
                                 ),
-                                PopupMenuItem(
-                                  child: Text('Logout'),
+                                const PopupMenuItem(
                                   value: 'logout',
+                                  child: Text('Logout'),
                                 ),
                               ];
                             },
@@ -110,7 +110,7 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 35),
+                  const SizedBox(height: 35),
                   Container(
                     width: 340,
                     decoration: BoxDecoration(
@@ -140,7 +140,7 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                         SizedBox(
                           height: 50.0,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 30),
+                            padding: const EdgeInsets.symmetric(horizontal: 30),
                             child: TextFormField(
                               enabled: !_isChecked,
                               decoration: InputDecoration(
@@ -153,12 +153,12 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         SizedBox(
                           height: 50.0,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 30),
+                            padding: const EdgeInsets.symmetric(horizontal: 30),
                             child: TextFormField(
                               enabled: !_isChecked,
                               decoration: InputDecoration(
@@ -171,12 +171,12 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         SizedBox(
                           height: 50.0,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 30),
+                            padding: const EdgeInsets.symmetric(horizontal: 30),
                             child: TextFormField(
                               enabled: !_isChecked,
                               decoration: InputDecoration(
@@ -189,7 +189,7 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         SizedBox(
                           height: 50.0,
@@ -219,7 +219,7 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                                   top: 5,
                                   bottom: 5,
                                   child: IconButton(
-                                    icon: Icon(Icons.calendar_today),
+                                    icon: const Icon(Icons.calendar_today),
                                     onPressed: _presentDatePicker,
                                   ),
                                 ),
@@ -227,12 +227,12 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         SizedBox(
                           height: 50.0,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 30),
+                            padding: const EdgeInsets.symmetric(horizontal: 30),
                             child: TextFormField(
                               enabled: !_isChecked,
                               decoration: InputDecoration(
@@ -245,12 +245,12 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         SizedBox(
                           height: 50.0,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 30),
+                            padding: const EdgeInsets.symmetric(horizontal: 30),
                             child: TextFormField(
                               enabled: !_isChecked,
                               decoration: InputDecoration(
@@ -263,12 +263,12 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         SizedBox(
                           height: 50.0,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 30),
+                            padding: const EdgeInsets.symmetric(horizontal: 30),
                             child: TextFormField(
                               enabled: !_isChecked,
                               decoration: InputDecoration(
@@ -281,30 +281,30 @@ class _ReportCaseDriverState extends State<ReportCaseDriver> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
 
                         //Next Button
                         SizedBox(
                           height: 50.0,
                           width: double.infinity,
                           child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 95),
+                              padding: const EdgeInsets.symmetric(horizontal: 95),
                               child: MYButton(
                                 gsntext: 'Next',
                                 onPressed: () {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => ReportCaseCase()),
+                                        builder: (context) => const ReportCaseCase()),
                                   );
                                 },
                               )),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   TextButton(
                     onPressed: () {
                       print('Need Help!');

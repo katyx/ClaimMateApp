@@ -2,7 +2,7 @@ import 'package:claim_mate/pages/contact_us.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({Key? key}) : super(key: key);
+  const Profile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class Profile extends StatelessWidget {
                     elevation: 2,
                     backgroundColor: Colors.white,
                     leading: IconButton(
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back,
                         color: Colors.black,
                       ),
@@ -33,7 +33,7 @@ class Profile extends StatelessWidget {
                         Navigator.pop(context);
                       },
                     ),
-                    title: Column(
+                    title: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -49,15 +49,15 @@ class Profile extends StatelessWidget {
                     actions: [
                       Row(
                         children: [
-                          Icon(Icons.person, color: Colors.black),
+                          const Icon(Icons.person, color: Colors.black),
                           PopupMenuButton(
-                            icon: Icon(Icons.arrow_drop_down,
+                            icon: const Icon(Icons.arrow_drop_down,
                                 color: Colors.black),
                             itemBuilder: (BuildContext context) {
                               return [
-                                PopupMenuItem(
-                                  child: Text('Logout'),
+                                const PopupMenuItem(
                                   value: 'logout',
+                                  child: Text('Logout'),
                                 ),
                               ];
                             },
@@ -73,13 +73,13 @@ class Profile extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 30),
-                  CircleAvatar(
+                  const SizedBox(height: 30),
+                  const CircleAvatar(
                     radius: 80,
                     backgroundColor: Colors.transparent,
                     backgroundImage: AssetImage('lib/images/userpic.png'),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Container(
                     width: 340,
                     decoration: BoxDecoration(
@@ -94,10 +94,10 @@ class Profile extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Column(
+                    child: const Column(
                       children: [
                         SizedBox(height: 20),
-                        const SizedBox(height: 20),
+                        SizedBox(height: 20),
                         Padding(
                           padding: EdgeInsets.fromLTRB(40, 0, 35, 30),
                           child: Column(
@@ -381,12 +381,12 @@ class Profile extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ContactUs()),
+                        MaterialPageRoute(builder: (context) => const ContactUs()),
                       );
                     },
                     child: const Text.rich(

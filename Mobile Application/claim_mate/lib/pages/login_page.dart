@@ -6,15 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController _nicController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _nicController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   void initState() {
@@ -52,12 +52,12 @@ class _LoginPageState extends State<LoginPage> {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text('Login Failed'),
-          content: Text('Please fill in all the fields.'),
+          title: const Text('Login Failed'),
+          content: const Text('Please fill in all the fields.'),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         ),
@@ -81,12 +81,12 @@ class _LoginPageState extends State<LoginPage> {
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text('Login Failed'),
-            content: Text('Provide correct NIC and password.'),
+            title: const Text('Login Failed'),
+            content: const Text('Provide correct NIC and password.'),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           ),
@@ -124,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: 50.0,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: TextFormField(
                       controller: _nicController,
                       decoration: InputDecoration(
@@ -140,13 +140,13 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
 
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
 
                 //Password
                 SizedBox(
                   height: 50.0,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: TextFormField(
                       controller: _passwordController,
                       obscureText: true,
@@ -170,7 +170,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 50.0,
                   width: double.infinity,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 35),
+                    padding: const EdgeInsets.symmetric(horizontal: 35),
                     child: MYButton(
                       gsntext: 'Sign In',
                       onPressed: () async {
@@ -184,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ContactUs()),
+                      MaterialPageRoute(builder: (context) => const ContactUs()),
                     );
                   },
                   child: const Text.rich(

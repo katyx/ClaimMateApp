@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ReportCaseImages extends StatefulWidget {
-  const ReportCaseImages({Key? key}) : super(key: key);
+  const ReportCaseImages({super.key});
 
   @override
   State<ReportCaseImages> createState() => _ReportCaseImagesState();
@@ -55,16 +55,16 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                     elevation: 2,
                     backgroundColor: Colors.white,
                     leading: IconButton(
-                      icon: Icon(Icons.arrow_back, color: Colors.black),
+                      icon: const Icon(Icons.arrow_back, color: Colors.black),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ReportCaseCase()),
+                              builder: (context) => const ReportCaseCase()),
                         );
                       },
                     ),
-                    title: Column(
+                    title: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -87,19 +87,19 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                     actions: [
                       Row(
                         children: [
-                          Icon(Icons.person, color: Colors.black),
+                          const Icon(Icons.person, color: Colors.black),
                           PopupMenuButton(
-                            icon: Icon(Icons.arrow_drop_down,
+                            icon: const Icon(Icons.arrow_drop_down,
                                 color: Colors.black),
                             itemBuilder: (BuildContext context) {
                               return [
-                                PopupMenuItem(
-                                  child: Text('Profile'),
+                                const PopupMenuItem(
                                   value: 'profile',
+                                  child: Text('Profile'),
                                 ),
-                                PopupMenuItem(
-                                  child: Text('Logout'),
+                                const PopupMenuItem(
                                   value: 'logout',
+                                  child: Text('Logout'),
                                 ),
                               ];
                             },
@@ -115,7 +115,7 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 60),
+                  const SizedBox(height: 60),
                   Container(
                     height: 475,
                     width: 340,
@@ -133,18 +133,18 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         TextButton(
                           onPressed: selectImage,
                           style: TextButton.styleFrom(
                             backgroundColor: Colors.blue,
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                          child: Text(
+                          child: const Text(
                             'Upload Image',
                             style: TextStyle(
                               color: Colors.white,
@@ -153,14 +153,14 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                           ),
                         ),
 
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         //display the uploaded images
                         GridView.builder(
                           shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
+                              const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
                             crossAxisSpacing: 10,
                             mainAxisSpacing: 10,
@@ -181,10 +181,10 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                                       height: 100,
                                       fit: BoxFit.cover,
                                     ),
-                                    SizedBox(height: 5),
+                                    const SizedBox(height: 5),
                                     Text(
                                       fileName,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 12,
                                       ),
                                       textAlign: TextAlign.center,
@@ -195,7 +195,7 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                                   top: 5,
                                   right: 5,
                                   child: IconButton(
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.remove_circle,
                                       color: Colors.red,
                                       size: 20,
@@ -213,16 +213,16 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                           },
                         ),
 
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   SizedBox(
                     height: 50.0,
                     width: double.infinity,
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 95),
+                      padding: const EdgeInsets.symmetric(horizontal: 95),
                       child: MYButton(
                         gsntext: 'Next',
                         onPressed: () {
@@ -232,15 +232,15 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                             showDialog(
                               context: context,
                               builder: (context) => AlertDialog(
-                                title: Text('Error'),
+                                title: const Text('Error'),
                                 content:
-                                    Text('Please upload at least 3 images.'),
+                                    const Text('Please upload at least 3 images.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                     },
-                                    child: Text('OK'),
+                                    child: const Text('OK'),
                                   ),
                                 ],
                               ),
@@ -250,7 +250,7 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   TextButton(
                     onPressed: () {
                       print('Need Help!');
