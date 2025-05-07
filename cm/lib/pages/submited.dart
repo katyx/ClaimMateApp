@@ -1,4 +1,4 @@
-import 'package:claim_mate/components/button.dart';
+import 'package:cm/components/button.dart';
 import 'package:flutter/material.dart';
 
 class Submited extends StatelessWidget {
