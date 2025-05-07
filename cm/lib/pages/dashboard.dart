@@ -1,10 +1,10 @@
-import 'package:claim_mate/apis/logout.dart';
-import 'package:claim_mate/pages/contact_us.dart';
-import 'package:claim_mate/pages/old_cases.dart';
-import 'package:claim_mate/pages/profile.dart';
-import 'package:claim_mate/pages/reg_vehicles.dart';
-import 'package:claim_mate/pages/report_case_vehicle.dart';
-import 'package:flutter/material.dart';
+import 'package:cm/apis/logout.dart';
+import 'package:cm/pages/contact_us.dart';
+import 'package:cm/pages/old_cases.dart';
+import 'package:cm/pages/profile.dart';
+import 'package:cm/pages/reg_vehicles.dart';
+import 'package:cm/pages/report_case_vehicle.dart';
+import 'package:cm/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'login_page.dart';
