@@ -36,6 +36,7 @@ dependencies:
   flutter_secure_storage: ^9.0.0
   geolocator: ^11.0.0
   image_picker: ^1.0.4
+  logger: ^2.0.2
 
 
 # dependencies:
