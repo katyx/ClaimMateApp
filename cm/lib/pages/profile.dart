@@ -1,4 +1,4 @@
-import 'package:claim_mate/pages/contact_us.dart';
+import 'package:cm/pages/contact_us.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
