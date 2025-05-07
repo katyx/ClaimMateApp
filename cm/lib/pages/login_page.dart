@@ -1,7 +1,7 @@
-import 'package:claim_mate/apis/login.dart';
-import 'package:claim_mate/components/button.dart';
-import 'package:claim_mate/pages/contact_us.dart';
-import 'package:claim_mate/pages/dashboard.dart';
+import 'package:cm/apis/login.dart';
+import 'package:cm/components/button.dart';
+import 'package:cm/pages/contact_us.dart';
+import 'package:cm/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
