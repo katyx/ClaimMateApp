@@ -2,7 +2,6 @@ import 'package:cm/apis/logout.dart';
 import 'package:cm/pages/contact_us.dart';
 import 'package:cm/pages/old_cases.dart';
 import 'package:cm/pages/profile.dart';
-// ignore: unused_import
 import 'package:cm/pages/reg_vehicles.dart';
 import 'package:cm/pages/report_case_vehicle.dart';
 import 'package:flutter/material.dart';
