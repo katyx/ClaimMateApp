@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:claim_mate/components/button.dart';
-import 'package:claim_mate/pages/report_case_case.dart';
+import 'package:cm/components/button.dart';
+import 'package:cm/pages/report_case_case.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
