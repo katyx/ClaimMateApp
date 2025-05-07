@@ -23,7 +23,7 @@ class _ReportCaseImagesState extends State<ReportCaseImages> {
     }
 
     final picker = ImagePicker();
-    final pickedImage = await picker.getImage(source: ImageSource.gallery);
+    final pickedImage = await picker.pickImage(source: ImageSource.gallery);
 
     if (pickedImage != null) {
       setState(() {
