@@ -67,15 +67,13 @@ class _LoginPageState extends State<LoginPage> {
         // Perform the login process
         String? token = await LoginService.login(nic, password);
 
-        if (token != null) {
-          // Login successful, navigate to the dashboard
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => DashboardScreen(nic: nic, token: token),
-            ),
-          );
-        }
+        // Login successful, navigate to the dashboard
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DashboardScreen(nic: nic, token: token),
+          ),
+        );
       } catch (e) {
         // Exception occurred during login, show an error message
         showDialog(
