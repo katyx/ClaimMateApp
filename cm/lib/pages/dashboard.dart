@@ -10,8 +10,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'login_page.dart';
 
 class DashboardScreen extends StatelessWidget {
-  final String token;
-  final String nic;
+  final String? token;
+  final String? nic;
 
   const DashboardScreen({required this.token, required this.nic, super.key});
 
@@ -23,45 +23,65 @@ class DashboardScreen extends StatelessWidget {
     if (token != null && nic != null) {
       bool logoutSuccess = await LogoutApi.logout(token, nic);
       if (logoutSuccess) {
-        // Perform any necessary actions after successful logout
-        // For example, navigate to the login screen
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => const LoginPage()),
         );
       } else {
-        // Handle logout failure
-        showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-            title: const Text('Logout Failed'),
-            content: const Text('Failed to logout. Please try again.'),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text('OK'),
-              ),
-            ],
-          ),
-        );
+        _showLogoutFailedDialog(context, 'Failed to logout. Please try again.');
       }
     } else {
-      // Handle case where token or nic is not available
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: const Text('Logout Failed'),
-          content: const Text('Token or NIC not found. Please login again.'),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('OK'),
-            ),
-          ],
-        ),
-      );
+      _showLogoutFailedDialog(
+          context, 'Token or NIC not found. Please login again.');
     }
   }
+
+  void _showLogoutFailedDialog(BuildContext context, String message) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Logout Failed'),
+        content: Text(message),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // void _handleLogout(BuildContext context) async {
+  //   final prefs = await SharedPreferences.getInstance();
+  //   String? token = prefs.getString('token');
+  //   String? nic = prefs.getString('nic');
+
+  //   bool logoutSuccess = await LogoutApi.logout(token?, nic?);
+  //   if (logoutSuccess) {
+  //     // Perform any necessary actions after successful logout
+  //     // For example, navigate to the login screen
+  //     Navigator.pushReplacement(
+  //       context,
+  //       MaterialPageRoute(builder: (context) => const LoginPage()),
+  //     );
+  //   } else {
+  //     // Handle logout failure
+  //     showDialog(
+  //       context: context,
+  //       builder: (context) => AlertDialog(
+  //         title: const Text('Logout Failed'),
+  //         content: const Text('Failed to logout. Please try again.'),
+  //         actions: [
+  //           TextButton(
+  //             onPressed: () => Navigator.pop(context),
+  //             child: const Text('OK'),
+  //           ),
+  //         ],
+  //       ),
+  //     );
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
