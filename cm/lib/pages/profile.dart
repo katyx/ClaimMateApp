@@ -133,7 +133,7 @@ class Profile extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          '9936283910v',
+                                          '200076303829',
                                         ),
                                       ],
                                     ),
@@ -211,7 +211,7 @@ class Profile extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'Heshan Chamindu Silva',
+                                          'Kaavya Fernando',
                                         ),
                                       ],
                                     ),
@@ -250,7 +250,7 @@ class Profile extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'Male',
+                                          'Female',
                                         ),
                                       ],
                                     ),
@@ -289,7 +289,7 @@ class Profile extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          '1999:12:24',
+                                          '2000:09:19',
                                         ),
                                       ],
                                     ),
@@ -328,7 +328,7 @@ class Profile extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'Heenatiyana, Minuwangoda.',
+                                          'Paris Perera Road, Ja-Ela.',
                                         ),
                                       ],
                                     ),
@@ -367,7 +367,7 @@ class Profile extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          '0778629294',
+                                          '0741823523',
                                         ),
                                       ],
                                     ),
